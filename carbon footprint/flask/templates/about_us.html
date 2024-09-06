@@ -1,0 +1,220 @@
+<!DOCTYPE html>  
+<html lang="en">  
+
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>EcoSmart: About Us</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
+    <style>  
+        body {  
+            font-family: 'Poppins', sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            background: linear-gradient(135deg, #e0f7fa, #80deea);  
+            color: #333;  
+            overflow-x: hidden;  
+            background-image: url('https://www.greenyellow.vn/wp-content/uploads/2023/02/Reducing-our-personal-carbon-footprint.webp');
+ /* Replace with your image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment:   
+ fixed;
+            animation: backgroundAnimation 15s ease infinite;  
+        }  
+
+        @keyframes backgroundAnimation {  
+            0% { background-position: 0% 50%; }  
+            50% { background-position: 100% 50%; }  
+            100% { background-position: 0% 50%; }  
+        }  
+
+        header {  
+            background-color: rgba(9, 80, 29, 0.9);  
+            color: white;  
+            padding: 20px 0;  
+            text-align: center;  
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  
+            position: sticky;  
+            top: 0;  
+            z-index: 1000;  
+            backdrop-filter: blur(10px);  
+        }  
+
+        header h1 {  
+            font-size: 3rem;  
+            margin: 0;  
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);  
+        }  
+
+        .container {  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 50px 20px;  
+        }  
+
+        .section {  
+            background: white;  
+            padding: 40px;  
+            margin-bottom: 40px;  
+            border-radius: 15px;  
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);  
+            backdrop-filter: blur(10px);  
+            animation: fadeIn 1s ease-out;  
+            transform: translateY(20px);  
+            opacity: 0;  
+            transition: transform 0.5s, opacity 0.5s;  
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(1px);
+        }  
+
+        .section.visible {  
+            transform: translateY(0);  
+            opacity: 1;  
+        }  
+
+        .section img {  
+            max-width: 100%;  
+            border-radius: 15px;  
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  
+            transition: transform 0.3s;  
+        }  
+
+        .section img:hover {  
+            transform: scale(1.05);  
+        }  
+
+        .section h2 {  
+            color: #185b6c;  
+            font-size: 2.5rem;  
+            margin-bottom: 20px;  
+            text-align: center;  
+            animation: slideIn 0.6s ease forwards;  
+        }  
+
+        @keyframes slideIn {  
+            0% { transform: translateY(-20px); opacity: 0; }  
+            100% { transform: translateY(0); opacity: 1; }  
+        }  
+
+        .section p {  
+            font-size: 1.1rem;  
+            line-height: 1.8;  
+            text-align: center;  
+        }  
+
+        .section ul {  
+            list-style: none;  
+            padding: 0;  
+        }  
+
+        .section ul li {  
+            font-size: 1.1rem;  
+            margin-bottom: 15px;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            transition: transform 0.3s;  
+        }  
+
+        .section ul li:hover {  
+            transform: scale(1.05);  
+        }  
+
+        .section ul li::before {  
+            content: "•";  
+            font-size: 1.5rem;  
+            color: #185b6c;  
+            margin-right: 10px;  
+        }  
+
+        footer {  
+            background-color: rgba(9, 80, 29, 0.9);  
+            color: white;  
+            text-align: center;  
+            padding: 30px;  
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);  
+        }  
+
+        @keyframes fadeIn {  
+            from {  
+                opacity: 0;  
+                transform: translateY(20px);  
+            }  
+
+            to {  
+                opacity: 1;  
+                transform: translateY(0);  
+            }  
+        }  
+
+        /* Media Queries for Responsiveness */  
+        @media (max-width: 768px) {  
+            header h1 {  
+                font-size: 2.5rem;  
+            }  
+
+            .section h2 {  
+                font-size: 2rem;  
+            }  
+
+            .section p, .section ul li {  
+                font-size: 1rem;  
+            }  
+        }  
+    </style>  
+    <script>  
+        document.addEventListener("DOMContentLoaded", () => {  
+            const sections = document.querySelectorAll('.section');  
+            window.addEventListener('scroll', () => {  
+                sections.forEach(section => {  
+                    const sectionPosition = section.getBoundingClientRect().top;  
+                    const screenPosition = window.innerHeight / 1.5;  
+                    if (sectionPosition < screenPosition) {  
+                        section.classList.add('visible');  
+                    }  
+                });  
+            });  
+        });  
+    </script>  
+</head>  
+
+<body>  
+    <header>  
+        <h1>About EcoSmart</h1>  
+    </header>  
+
+    <div class="container">  
+        <div class="section">  
+            <h2>Our Mission</h2>  
+            <p>We are a group of developers committed to creating tools that help people understand and reduce their carbon footprints. Our mission is to empower individuals and organizations with the knowledge and tools they need to make more sustainable choices.</p>  
+        </div>  
+
+        <div class="section">  
+            <h2>Why We Chose This Project</h2>  
+            <p>Understanding the environmental impact of our activities is crucial for a sustainable future. We chose this project to develop innovative solutions that simplify the process of measuring and reducing carbon footprints, making it easier for everyone to contribute to a greener planet.</p>  
+        </div>  
+
+        <div class="section">  
+            <h2>Our Impacts and Initiatives</h2>  
+            <ul>  
+                <li>Developed tools that helped users reduce their carbon emissions by an average of 20%.</li>  
+                <li>Partnered with organizations to implement green practices and sustainability programs.</li>  
+                <li>Hosted workshops and webinars to educate the public about sustainable living.</li>  
+                <li>Supported local environmental projects and initiatives through funding and volunteering.</li>  
+            </ul>  
+        </div>  
+
+        <div class="section">  
+            <h2>Sustainability Efforts</h2>  
+            <p>Our commitment to sustainability is reflected in every aspect of our work. From using eco-friendly technologies to ensuring that our operations have minimal environmental impact, we strive to lead by example and inspire others to follow suit.</p>  
+        </div>  
+    </div>  
+
+    <footer>  
+        <p>© 2024 EcoSmart. All Rights Reserved.</p>  
+    </footer>  
+</body>  
+
+</html>
